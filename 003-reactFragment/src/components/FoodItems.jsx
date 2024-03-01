@@ -9,7 +9,7 @@ function FoodItems(props){
             <ErrorMessage items={items} />
             <ul className="list-group list-group-flush">
                 {items.map(property => (
-                    <Item property={property}></Item>
+                    <Item property={property} handleLearnButton = {() => console.log(`Learning ${property}`)}></Item>
                 ))}
             </ul>
         </>
