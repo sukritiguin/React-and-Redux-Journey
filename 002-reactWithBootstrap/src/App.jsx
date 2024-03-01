@@ -1,8 +1,13 @@
 import AppName from "./components/AppName";
 import AddTodo from "./components/AddTodo";
-import TodoItem from "./components/TodoItem";
+import TodoItems from "./components/TodoItems";
 
 function App() {
+  let items_dict = [
+    { task: "Buy Orange", deadline: "10-12-2023" },
+    { task: "Go for meeting", deadline: "12-12-2023" },
+    { task: "LinkedIn Learning", deadline: "12-12-2024"}
+  ];
 
   return (
     <>
@@ -11,12 +16,10 @@ function App() {
         <div className="container">
           <AddTodo></AddTodo>
         </div>
-        <div className="items-container">
-            <TodoItem></TodoItem>
-        </div>
+        <TodoItems items_dict={items_dict}></TodoItems>
       </center>
     </>
-  )
+  );
 }
 
 export default App;
