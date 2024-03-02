@@ -3,12 +3,13 @@ import styles from "./Item.module.css";
 function Item(props) {
   let property = props.property;
   let handleLearnButton = props.handleLearnButton;
+  let isBought = props.isBought;
+
+
   return (
     <>
-      <li>
-        <div key={property} className={`list-group-item ${styles["iteam-li"]}`}>
+      <li key={property} className={`list-group-item ${isBought && 'active'} ${styles["iteam-li"]}`}>
           {property}
-        </div>
         <span>
           <button
             className={styles.learnButton}
